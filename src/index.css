@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #22242e;
+  color: aliceblue;
+}
+
+@theme {
+
+  --color-section1:#22242e;
+  --color-section2:#1b1d29;
+  --color-primary:#9810fa;
+  
+  
+  /* orveride default font */
+  --font-*: initial;
+  --font-sans: "Roboto", "sans-serif";
+
+  /* custom fonts*/
+  --font-heads: "Poetsen One", "sans-serif";
+  /* --font-hero: */
+
+  /* custom shadow */
+  --shadow-glow: 0 0 10px #211eb5;
+
+  --animate-slide-left: slideLeft 20s linear infinite;
+  --animate-slide-right: slideRight 5s linear infinite;
+
+  @keyframes slideLeft {
+    100% {
+      transform: translateX(calc(-100% + (-100px)));
+    }
+  }
+  @keyframes slideRight {
+    100% {
+      transform: translateX(calc(100% + 100px));
+    }
+  }
+}
+
+
+.remove-scrollbar::-webkit-scrollbar{
+  display: none;
+}
