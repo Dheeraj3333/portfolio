@@ -6,11 +6,7 @@ import Button from "../common/Button";
 
 const AboutMain = () => {
   return (
-    <section id="about" className=" bg-section1 relative text-white pt-7">
-
-      <div className="fadediv absolute w-full p-10 -top-19 bg-gradient-to-b from-section1/1 to-section1">
-
-      </div>
+    <section id="about" className="about bg-section1 relative text-white pt-7">
       
       <Wrapper>
         <AboutContent />

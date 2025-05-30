@@ -9,7 +9,7 @@ const Button = ({ text, icon: Icon }: Props) => {
   return (
     <button
       // title="download my resume"
-      className="flex gap-2 mt-5 bg-primary rounded-full px-2 max-h-[50px] pl-4 py-2 items-center cursor-pointer relative group z-10 overflow-hidden"
+      className="flex gap-2 mt-5 bg-primary rounded-full px-2 max-h-[50px] pl-4 py-2 items-center cursor-pointer relative group z-[9] overflow-hidden"
     >
       {text}
      <div className='relative -top-[27.5px] group-hover:top-[28px] transition-all duration-300 w-[40px] flex flex-col gap-4 '>

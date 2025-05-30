@@ -1,4 +1,5 @@
-import {links} from '../../utils/data'
+import { links } from "../../utils/data";
+import TextFlipper from "../common/TextFlipper";
 
 export const NavbarLinks = ({ setMenuOpen }: { setMenuOpen: () => void }) => {
   return (
@@ -10,9 +11,14 @@ export const NavbarLinks = ({ setMenuOpen }: { setMenuOpen: () => void }) => {
             key={index}
             className="max-md:bg-primary max-md:w-full text-center flex justify-center rounded-xl "
           >
-            <a className="max-md:w-full max-md:py-2" href={`#${link.link}`}>
-              {link.target}
-            </a>
+            <TextFlipper className=" w-full">
+              <a
+                className="max-md:w-full max-md:py-2 w-[100%] block"
+                href={`#${link.link}`}
+              >
+                {link.target}
+              </a>
+            </TextFlipper>
           </li>
         );
       })}
