@@ -18,10 +18,10 @@ const NavigatingLinks = ({
                onClick={toggleFunction}
                >
 
-                <TextFlipper className="w-fit pb-[1px]">
+                <TextFlipper className="max-md:w-full w-fit pb-[1px]">
                   <a
                     href={`#${link.link}`}
-                    className="text-6xl max-md:text-4xl font-bold  uppercase"
+                    className="text-6xl w-full block max-md:text-4xl font-bold  uppercase"
                   >
                     {link.target}
                   </a>

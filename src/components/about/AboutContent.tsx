@@ -1,5 +1,5 @@
 import Heading from "../common/Heading";
-import LineAnimator from "../common/LineAnimater";
+import LineAnimator from "../common/LineAnimator";
 
 const AboutContent = () => {
   return (
@@ -17,7 +17,7 @@ export default AboutContent;
 
 function ContentCard1() {
   return (
-    <LineAnimator classNotation=".mask-para">
+    <LineAnimator classNotation=".mask-para" duration={1} start1="top" start2="80%" end1="bottom" end2="60%">
       <p className="mask-para text-3xl max-md:text-2xl text-[#dadada]">
         My name is Dheeraj Patel and i'm a passionate MERN Stack Developer and a
         dedicated mentor with hands-on experience in building real-world web

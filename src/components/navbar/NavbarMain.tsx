@@ -17,7 +17,7 @@ const NavbarMain = () => {
         <div className={`${menuOpen ? "block" : "max-md:hidden"}`}>
           <NavbarLinks setMenuOpen={toggleMenu} />
         </div>
-        <NavbarBtn />
+      <NavbarBtn />
       </div>
       <div
         className="max-md:flex hidden cursor-pointer min-w-17 min-h-17 max-h-17 bg-black border-2 rounded-full items-center justify-center"

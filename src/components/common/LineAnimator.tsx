@@ -5,11 +5,26 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 interface Props {
-  classNotation: string;
   children: React.ReactNode;
+  classNotation: string;
+  duration?: number;
+  start1?: string;
+  start2?: string;
+  end1?: string;
+  end2?: string;
+  markers?: boolean;
 }
 
-const LineAnimator = ({ classNotation = ".mask-para", children }: Props) => {
+const LineAnimator = ({
+  classNotation,
+  children,
+  duration = 1,
+  start1 = "top",
+  start2 = "80%",
+  end1 = "bottom",
+  end2 = "60%",
+  markers = false,
+}: Props) => {
   useGSAP(() => {
     document.fonts.ready.then(() => {
       console.log("font is ready");
@@ -27,13 +42,14 @@ const LineAnimator = ({ classNotation = ".mask-para", children }: Props) => {
           return gsap.from(self.lines, {
             scrollTrigger: {
               trigger: classNotation,
-              start: "top 80%", // when top of element hits 80% of viewport
-              end: "bottom 60%",
+              scroller:document.body,
+              start: `${start1} ${start2}`, // when top of element hits 80% of viewport
+              end: `${end1} ${end2}`,
               scrub: false,
               toggleActions: "play none none reverse",
-              // markers: true, // <--- remove this in production
+              markers: markers, // <--- remove this in production
             },
-            duration: 1,
+            duration: duration,
             yPercent: 100,
             opacity: 0,
             stagger: 0.15,
