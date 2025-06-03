@@ -31,11 +31,19 @@ const NavigatingLinks = ({
           })}
         </ul>
 
-        <div className="pt-10 text-3xl">
+        <div className="flex flex-col pt-10 gap-8">
+          <div className="text-3xl">
             <b>Email Address : </b> <br />
             <span className="max-sm:text-2xl">
                 <a href="mailto:dpthakur0304@gmail.com">dpthakur0304@gmail.com</a>
             </span>
+        </div>
+        <div className="text-3xl">
+            <b>Github : </b> <br />
+            <span className="max-sm:text-2xl">
+                <a href="https://github.com/Dheeraj3333">github.com/Dheeraj3333</a>
+            </span>
+        </div>
         </div>
       </div>
     </>

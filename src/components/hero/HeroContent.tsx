@@ -5,7 +5,7 @@ const HeroContent = () => {
   return (
     <div className="">
         <span className="leading-40 mask-heading ">
-          <p className="font-heads text-shadow-[0_0_10px_black] leading-20 text-[4vw]">
+          <p className="font-heads text-shadow-[0_0_10px_black] leading-20 text-[4vw] max-sm:text-2xl ">
             Hi I'm a
           </p>
           <p className="font-heads text-[12vw] text-black max-sm:leading-0 max-lg:leading-[8vw]">

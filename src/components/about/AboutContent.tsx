@@ -6,7 +6,7 @@ const AboutContent = () => {
     <div>
       <Heading secondLevelHeading={"About Me"} />
 
-      <div className="content-card-holder flex sm:gap-20 gap-10 pb-5 max-sm:pb-4 flex-wrap text-shadow-[0_0_10px_#000]">
+      <div className="content-card-holder flex sm:gap-20 gap-10 max-sm:pb-4 flex-wrap text-shadow-[0_0_10px_#000]">
         <ContentCard1 />
       </div>
     </div>

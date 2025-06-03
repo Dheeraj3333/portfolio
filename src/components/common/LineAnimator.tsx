@@ -42,7 +42,7 @@ const LineAnimator = ({
           return gsap.from(self.lines, {
             scrollTrigger: {
               trigger: classNotation,
-              scroller:document.body,
+              scroller: document.body,
               start: `${start1} ${start2}`, // when top of element hits 80% of viewport
               end: `${end1} ${end2}`,
               scrub: false,
@@ -57,6 +57,7 @@ const LineAnimator = ({
           });
         },
       });
+      console.log(split);
     });
   }, []);
 

@@ -1,5 +1,3 @@
-import { Languages } from "lucide-react";
-
 // navigation links
 export const links = [
   {
@@ -40,9 +38,8 @@ export const programmingLanguages = [
   },
 ];
 
-
 // development techstack
-export const techStack = [
+export const frontEndTechStack = [
   {
     image: "/images/html-icon.webp",
     skill: "HTML",
@@ -51,30 +48,33 @@ export const techStack = [
     image: "/images/css-icon.webp",
     skill: "CSS",
   },
-  // {
-  //   image: "/images/javascript-icon.webp",
-  //   skill: "Javascript",
-  // },
+  {
+    image: "/images/javascript-icon.webp",
+    skill: "Javascript",
+  },
   {
     image: "/images/react-icon.webp",
     skill: "React JS",
   },
-  // {
-  //   image: "/images/typescript-icon.webp",
-  //   skill: "Typescript",
-  // },
   {
     image: "/images/tailwind-icon.png",
     skill: "Tailwind",
   },
   {
-    image: "/images/nextjs-icon.png",
-    skill: "Next JS",
-  },
-  {
     image: "/images/redux-icon.png",
     skill: "Redux Js",
   },
+  {
+    image: "/images/typescript-icon.webp",
+    skill: "Typescript",
+  },
+  {
+    image: "/images/nextjs-icon.png",
+    skill: "Next JS",
+  },
+];
+
+export const BackendTechStack = [
   {
     image: "/images/nodejs-icon.png",
     skill: "NodeJS",
