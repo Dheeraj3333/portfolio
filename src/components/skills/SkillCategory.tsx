@@ -2,6 +2,7 @@ import SkillsMapper from "./SkillsMapper";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
+
 interface Category {
   categorie: string;
   techStacks: { image: string; skill: string }[];
@@ -39,11 +40,11 @@ export default function SkillCategory({
       </div>
       <div
         className={`content w-full transition-all duration-300 ease-out ${
-          isOpen ? "h-[240px]" : "h-0"
+          isOpen ? "h-[290px]" : "h-0"
         } overflow-hidden`}
       >
         <div className="border-t-[1px] px-1">
-          <SkillsMapper skillset={techStacks} />
+          <SkillsMapper id={categorie} skillset={techStacks} />
         </div>
       </div>
     </div>

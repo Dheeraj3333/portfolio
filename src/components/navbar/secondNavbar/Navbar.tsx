@@ -29,9 +29,9 @@ const Navbar = () => {
   function toggleActive() {
     setIsActive(!isActive);
     if (isActive) {
-      document.getElementsByTagName("body")[0].style.overflow = "auto";
+      document.getElementsByTagName("html")[0].style.overflow = "auto";
     } else {
-      document.getElementsByTagName("body")[0].style.overflow = "hidden";
+      document.getElementsByTagName("html")[0].style.overflow = "hidden";
     }
   }
 
@@ -59,7 +59,7 @@ const Navbar = () => {
       </button>
 
       <div
-        className={`fixed navItems w-full h-full flex bg-transparent backdrop-blur-2xl top-0 z-[49] transition-all duration-600 ${
+        className={`fixed navItems w-full min-h-full flex bg-transparent backdrop-blur-2xl top-0 z-[49] transition-all duration-600 ${
           isActive ? "left-0" : "left-full"
         } `}
       >

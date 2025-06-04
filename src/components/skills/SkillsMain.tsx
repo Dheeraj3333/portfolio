@@ -36,7 +36,7 @@ const SkillsMain = () => {
       scrollTrigger: {
         trigger: ".backend",
         scroller: document.body,
-        start: "top 85%",
+        start: "top 100%",
         end: "top 50%",
         scrub: false,
         toggleActions: "play none none reverse",

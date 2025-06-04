@@ -8,9 +8,9 @@ const NavigatingLinks = ({
 }) => {
   return (
     <>
-      <div className="w-1/2 max-lg:hidden"></div>
-      <div className="navcontent w-1/2 max-md:w-full h-full p-8">
-        <ul className="navlist flex flex-col gap-4 ">
+      <div className="w-5/3 max-lg:hidden"></div>
+      <div className="navcontent w-5/2 max-md:w-full h-full p-8 max-md:pt-25">
+        <ul className="navlist flex flex-col ">
           {links.map((link, idx) => {
             return (
               <li key={idx}
