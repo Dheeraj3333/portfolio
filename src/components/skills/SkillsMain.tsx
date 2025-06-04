@@ -46,7 +46,7 @@ const SkillsMain = () => {
   });
 
   return (
-    <section id="skills" className=" bg-section2 pt-7">
+    <section id="skills" className=" bg-section2 pt-7 select-none">
       <Wrapper>
         <Heading secondLevelHeading="My Skills" />
 

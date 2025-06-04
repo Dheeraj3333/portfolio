@@ -9,7 +9,11 @@ const NavigatingLinks = ({
   return (
     <>
       <div className="w-5/3 max-lg:hidden"></div>
-      <div className="navcontent w-5/2 max-md:w-full h-full p-8 max-md:pt-25">
+      <div className="navcontent relative w-5/2 max-md:w-full h-full p-8 max-md:pt-25">
+
+      <div className="jwels absolute w-120 h-120 max-md:w-80 max-md:h-80 rounded-full backdrop-blur-[100px] bg-[#525252] -right-40 -top-60 max-md:-top-25 max-md:-right-30"></div>
+      <div className="jwels absolute w-120 h-120 max-md:w-80 max-md:h-80 rounded-full backdrop-blur-[100px] bg-[#52525259] -right-60 -top-30 max-md:-top-10 max-md:-right-50"></div>
+
         <ul className="navlist flex flex-col ">
           {links.map((link, idx) => {
             return (
@@ -21,7 +25,7 @@ const NavigatingLinks = ({
                 <TextFlipper className="max-md:w-full w-fit pb-[1px]">
                   <a
                     href={`#${link.link}`}
-                    className="text-6xl w-full block max-md:text-4xl font-bold  uppercase"
+                    className="text-6xl w-full block max-md:text-4xl font-bold text-shadow-[0_0_4px_black] uppercase"
                   >
                     {link.target}
                   </a>
