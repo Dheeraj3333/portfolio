@@ -100,3 +100,43 @@ export const BackendTechStack = [
     skill: "NestJS",
   },
 ];
+
+// projects data
+export const projectsData = [
+  {
+    name: "Skillsyard",
+    link: "https://skillsyard.com",
+    frontImage: "",
+    backgorundImage:""
+  },
+  {
+    name: "Wedmoo",
+    link: "https://wedmoo.com",
+    frontImage: "",
+    backgorundImage:""
+  },
+  {
+    name: "CancerHeal",
+    link: "https://www.cancerheal.co.in/",
+    frontImage: "",
+    backgorundImage:""
+  },
+  {
+    name: "HotelsWale",
+    link: "https://hotelswale.com",
+    frontImage: "",
+    backgorundImage:""
+  },
+  {
+    name: "Hanushiv Cricket Academy",
+    link: "https://hanushivsportsmanagement.in/",
+    frontImage: "",
+    backgorundImage:""
+  },
+  // {
+  //   name: "Skillsyard",
+  //   link: "https://skillsyard.com",
+  //   frontImage: "",
+  //   backgorundImage:""
+  // },
+];

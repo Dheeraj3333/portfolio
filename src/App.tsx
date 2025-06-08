@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import AboutMain from "./components/about/AboutMain";
-import ExperinceMain from "./components/experince/ExperinceMain";
+import ProjectMain from "./components/projects/ProjectMain";
 import MainHero from "./components/hero/MainHero";
 import Navbar from "./components/navbar/secondNavbar/Navbar";
 import SkillsMain from "./components/skills/SkillsMain";
@@ -54,7 +54,8 @@ function App() {
         <Navbar />
         <AboutMain />
         <SkillsMain />
-        <ExperinceMain />
+        <ProjectMain />
+        <div className="min-h-screen"></div>
       </main>
     </>
   );
