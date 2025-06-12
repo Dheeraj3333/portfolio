@@ -9,14 +9,14 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const SkillsMain = () => {
+const SkillsMain = ({ onToggle }: { onToggle: () => void }) => {
   useGSAP(() => {
     gsap.from(".frontend", {
       y: 100,
       scale: 0.8,
       opacity: 0,
       duration: 0.5,
-      stagger:1,
+      stagger: 1,
       scrollTrigger: {
         trigger: ".frontend",
         scroller: document.body,
@@ -32,7 +32,7 @@ const SkillsMain = () => {
       scale: 0.8,
       opacity: 0,
       duration: 0.5,
-      stagger:1,
+      stagger: 1,
       scrollTrigger: {
         trigger: ".backend",
         scroller: document.body,
@@ -60,6 +60,7 @@ const SkillsMain = () => {
               initialState={true}
               techStacks={frontEndTechStack}
               categorie="Frontend"
+              onToggle={onToggle}
             />
           </div>
           <div className="backend">
@@ -67,6 +68,7 @@ const SkillsMain = () => {
               initialState={false}
               techStacks={BackendTechStack}
               categorie="Backend"
+              onToggle={onToggle}
             />
           </div>
           {/* <SkillCategory techStacks={programmingLanguages} categorie="Programming Languages" /> */}

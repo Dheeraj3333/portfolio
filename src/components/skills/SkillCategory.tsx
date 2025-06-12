@@ -7,18 +7,21 @@ interface Category {
   categorie: string;
   techStacks: { image: string; skill: string }[];
   initialState?: boolean;
+  onToggle:()=>void
 }
 
 export default function SkillCategory({
   categorie,
   techStacks,
   initialState = false,
+  onToggle
 }: Category) {
 
   const [isOpen, setIsOpen] = useState(initialState);
 
   function toogleOpen() {
     setIsOpen(!isOpen);
+    onToggle()
   }
 
   return (
