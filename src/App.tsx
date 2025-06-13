@@ -61,7 +61,7 @@ function App() {
         <AboutMain />
         <SkillsMain onToggle={refreshScrollTrigger} />
         <ProjectMain />
-        <div className="min-h-screen"></div>
+        {/* <div className="min-h-screen"></div> */}
       </main>
     </>
   );

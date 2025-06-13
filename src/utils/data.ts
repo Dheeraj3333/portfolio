@@ -8,10 +8,10 @@ export const links = [
     link: "skills",
     target: "Skills",
   },
-  {
-    link: "experince",
-    target: "Experince",
-  },
+  // {
+  //   link: "experince",
+  //   target: "Experince",
+  // },
   {
     link: "projects",
     target: "Projects",
@@ -106,37 +106,36 @@ export const projectsData = [
   {
     name: "Skillsyard",
     link: "https://skillsyard.com",
-    frontImage: "",
-    backgorundImage:""
+    demo: "/videos/skillsyard-demo.mp4",
+    image:"",
+    backgorundImage:"/images/skillsyard-bg.avif"
   },
   {
     name: "Wedmoo",
     link: "https://wedmoo.com",
-    frontImage: "",
-    backgorundImage:""
+    demo: "/videos/wedmoo-demo.mp4",
+    image:"",
+    backgorundImage:"/images/wedmoo-bg.avif"
   },
   {
     name: "CancerHeal",
     link: "https://www.cancerheal.co.in/",
-    frontImage: "",
-    backgorundImage:""
+    demo: "/videos/cancerheal-demo.mp4",
+    image:"",
+    backgorundImage:"/images/cancerheal-bg.avif"
   },
   {
     name: "HotelsWale",
     link: "https://hotelswale.com",
-    frontImage: "",
-    backgorundImage:""
+    demo: "",
+    image:"/images/hotelswale-demo.png",
+    backgorundImage:"/images/hotelswale-bg.avif"
   },
   {
     name: "Hanushiv Cricket Academy",
     link: "https://hanushivsportsmanagement.in/",
-    frontImage: "",
-    backgorundImage:""
+    demo: "/videos/hanushiv-demo.mp4",
+    image:"",
+    backgorundImage:"/images/hanushiv-bg.avif"
   },
-  // {
-  //   name: "Skillsyard",
-  //   link: "https://skillsyard.com",
-  //   frontImage: "",
-  //   backgorundImage:""
-  // },
 ];
