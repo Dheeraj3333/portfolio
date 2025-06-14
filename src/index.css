@@ -40,7 +40,7 @@ body {
   --color-primary: var(--primary);
   
   --animate-slide-left: slideLeft 20s linear infinite;
-  --animate-slide-right: slideRight 5s linear infinite;
+  --animate-slide-right: slideRight 20s linear infinite;
 
   @keyframes slideLeft {
     100% {

@@ -9,42 +9,61 @@ import { useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 const MainHero = () => {
-  const hero = useRef(null);
-  const nav = useRef(null);
+  const hero = useRef<HTMLDivElement | null>(null);
+  const nav = useRef<HTMLDivElement | null>(null);
+  const headerRef = useRef<HTMLElement | null>(null);
 
-  useGSAP(() => {
-    gsap.to(hero.current, {
-      scale: "0.9",
-      translateY: "100",
-      opacity: "0",
-      scrollTrigger: {
-        trigger: hero.current,
-        start: "top top",
-        end: "200% -100%",
-        scrub: true
-        // markers:true
-      },
-    });
-  }, []);
+  useGSAP(
+    () => {
+      gsap.to(hero.current, {
+        scale: "0.9",
+        translateY: "100",
+        opacity: "0",
+        scrollTrigger: {
+          trigger: headerRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+          // markers: true,
+        },
+      });
+    },
+    { scope: ".header" }
+  );
 
-  useGSAP(() => {
-    gsap.to(nav.current, {
-      scale: "0.9",
-      translateY: "-100",
-      opacity: "0",
-      scrollTrigger: {
-        trigger: nav.current,
-        start: "top top",
-        end: "200% -100%",
-        scrub: true
-        // markers:true
-      },
-    });
-  }, []);
+  useGSAP(
+    () => {
+      gsap.to(nav.current, {
+        scale: "0.9",
+        translateY: "-100",
+        opacity: "0",
+        scrollTrigger: {
+          trigger: headerRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+          // markers: true,
+        },
+      });
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    },
+    { scope: ".header" }
+  );
+
+  function handleResize() {
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 500);
+  }
 
   return (
     <header
-      className="sticky top-0 z-10 min-h-[650px] max-sm:min-h-screen
+      ref={headerRef}
+      className="header sticky top-0 z-10 min-h-[650px] max-sm:min-h-screen
       "
       style={{
         backgroundImage:
@@ -58,7 +77,7 @@ const MainHero = () => {
         <div ref={nav} className="relative z-30">
           <NavbarMain />
         </div>
-        <div ref={hero} className="relative z-20" >
+        <div ref={hero} className="relative z-20">
           <HeroContent />
         </div>
       </Wrapper>

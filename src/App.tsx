@@ -6,7 +6,7 @@ import Navbar from "./components/navbar/secondNavbar/Navbar";
 import SkillsMain from "./components/skills/SkillsMain";
 import gsap from "gsap";
 import { ReactLenis, useLenis } from "lenis/react";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,20 +37,26 @@ function App() {
 
     // Update ScrollTrigger on scroll
     lenis.on("scroll", ScrollTrigger.update);
-
+    window.addEventListener("resize", refreshScrollTrigger);
+    
     // Cleanup
     return () => {
       lenis.off("scroll", ScrollTrigger.update);
       ScrollTrigger.scrollerProxy(document.body, null as any); // clean proxy
+      window.removeEventListener("resize", refreshScrollTrigger);
     };
   }, [lenis]);
 
-  function refreshScrollTrigger() {
+  function refreshScrollTrigger() { 
     setTimeout(() => {
       ScrollTrigger.refresh();
     }, 500);
     console.log("scrolltrigger refreshed");
   }
+
+
+
+
 
   return (
     <>

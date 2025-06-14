@@ -2,7 +2,7 @@ import { projectsData } from "@/utils/data";
 
 const Counter = () => {
   return (
-    <div className="counter scale-120 max-lg:scale-100 overflow-hidden sticky top-10 flex gap-1 font-heads justify-center max-h-[200px]">
+    <div className="counter w-fit scale-120 max-lg:scale-100 overflow-hidden sticky top-10 flex gap-1 font-heads justify-start max-h-[200px]">
       <span className="text-[200px] max-h-[200px] h-[200px] w-[120px] flex justify-center items-center relative">
         0
       </span>

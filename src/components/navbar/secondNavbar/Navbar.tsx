@@ -26,15 +26,13 @@ const Navbar = () => {
 
   const [isActive, setIsActive] = useState(false);
 
-  function toggleActive() {
+  function toggleScroll() {
     setIsActive(!isActive);
     if (!isActive) {
       document.body.style.overflow = "hidden";
-      document.documentElement.style.overflow = "hidden";
       lenis?.stop();
     } else {
       document.body.style.overflow = "auto";
-      document.documentElement.style.overflow = "auto";
       lenis?.start();
     }
   }
@@ -44,7 +42,7 @@ const Navbar = () => {
       <button
         ref={navbtn}
         className="fixed scale-0 z-[50] top-8 right-8 cursor-pointer class flex items-center justify-center flex-col gap-2 bg-black w-[70px] h-[70px] rounded-full shadow-[0_0_5px_#fff] px-4"
-        onClick={toggleActive}
+        onClick={toggleScroll}
       >
         <span
           className={`h-[3px] w-full bg-white rounded-full transition-all duration-400 ${
@@ -67,7 +65,7 @@ const Navbar = () => {
           isActive ? "left-0" : "left-full"
         } `}
       >
-        <NavigatingLinks toggleFunction={toggleActive} />
+        <NavigatingLinks toggleFunction={toggleScroll} />
         
       </div>
     </nav>

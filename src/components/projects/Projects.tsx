@@ -102,13 +102,13 @@ const Projects = () => {
 
   return (
     <div ref={projectRef} className="project flex">
-      <div className="numbers max-w-[40%] w-full relative max-md:hidden">
+      <div className="numbers max-w-[30%] w-full relative max-md:hidden">
         <div ref={counterRef} className="">
           <Counter />
         </div>
       </div>
       <div
-        className="project-content max-w-[60%] w-full max-md:max-w-full"
+        className="project-content max-w-[70%] w-full max-md:max-w-full"
         ref={projectContentRef}
       >
         <ul>

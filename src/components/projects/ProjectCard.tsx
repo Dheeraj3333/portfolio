@@ -1,12 +1,16 @@
 import { ArrowUpRight } from "lucide-react";
 import TextFlipper from "../common/TextFlipper";
+import { useGSAP } from "@gsap/react";
+import { gsap, ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface ProjectData {
   project: {
     name: string;
     link: string;
     demo: string;
-    image:string,
+    image: string;
     backgorundImage: string;
   };
 }
@@ -19,6 +23,15 @@ const ProjectCard = ({ project }: ProjectData) => {
     backgroundSize: "cover",
   };
 
+  useGSAP(() => {
+    if (project.demo) {
+      // gsap.to;
+      console.log("yes")
+    }else{
+      console.log("no")
+    }
+  });
+
   return (
     <div className="pb-10 flex flex-col gap-8">
       <div
@@ -27,17 +40,23 @@ const ProjectCard = ({ project }: ProjectData) => {
       >
         <div className="content">
           {project.demo && (
-            <video className="w-full aspect-square object-cover shadow-[0_0_10px_#000] rounded-2xl"  autoPlay loop muted>
+            <video
+              className="w-full aspect-square object-cover shadow-[0_0_10px_#000] rounded-2xl"
+              autoPlay
+              loop
+              muted
+            >
               <source src={project.demo} />
             </video>
           )}
-          {!project.demo && <img className="rounded-2xl" src={project.image}/>}
+          {!project.demo && <img className="rounded-2xl" src={project.image} />}
         </div>
       </div>
       <div className="details min-h-[200px] flex flex-col gap-6">
         <h3>
           <TextFlipper>
-            <a target="_blank"
+            <a
+              target="_blank"
               className="text-6xl block max-md:text-4xl font-extrabold text-shadow-[0_0_4px_black] uppercase w-fit"
               href={project.link}
             >
@@ -45,7 +64,8 @@ const ProjectCard = ({ project }: ProjectData) => {
             </a>
           </TextFlipper>
         </h3>
-        <a target="_blank"
+        <a
+          target="_blank"
           href={project.link}
           className="bg-white relative text-black rounded-full px-6 py-4 text-4xl max-md:text-2xl capitalize flex transition-all duration-300 overflow-hidden w-[246px] hover:w-[210px] hover:translate-x-[20px] group max-md:w-fit max-md:hover:w-fit"
         >
